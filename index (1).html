@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resident Complaint Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      background: #fff;
+      margin: 40px auto;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin: 12px 0 5px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    textarea {
+      height: 120px;
+      resize: vertical;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Resident Complaint Form</h2>
+    <form action="https://formspree.io/f/mgvlwklv" method="POST" enctype="multipart/form-data">
+      
+      <label>Full Name</label>
+      <input type="text" name="name" required>
+      
+      <label>Residential Address</label>
+      <input type="text" name="address" required>
+      
+      <label>Phone Number</label>
+      <input type="tel" name="phone" placeholder="e.g. 012-3456789" required>
+      
+      <label>Complaint Category</label>
+      <select name="category" required>
+        <option value="">-- Please Select --</option>
+        <option>Water Supply</option>
+        <option>Electricity</option>
+        <option>Parking</option>
+        <option>Security</option>
+        <option>Others</option>
+      </select>
+      
+      <label>Complaint Title</label>
+      <input type="text" name="title" required>
+      
+      <label>Complaint Description</label>
+      <textarea name="description" required></textarea>
+      
+      <label>Upload Image (Optional)</label>
+      <input type="file" name="file">
+      
+      <button type="submit">Submit Complaint</button>
+    </form>
+  </div>
+</body>
+</html>
